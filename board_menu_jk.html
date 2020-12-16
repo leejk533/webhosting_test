@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+	var minPls = [0
+		          ,3,2,2,3,2
+		          ,2,2,2,2,2
+		          ,2,2,2,2,2
+		          ,3,2,2,1,1
+		          ,2,2,2,2];
+	var maxPls = [0
+		          ,4,8,4,5,6
+		          ,5,6,6,6,4
+		          ,8,4,6,4,4
+		          ,6,4,3,1,1
+		          ,8,2,2,10];
+	function chgPlayers(val){
+		if(val == "0"){
+			for(var i=0;i<minPls.length;i++){
+				if(i>0){
+					document.getElementById("game"+i).style.display = "block";
+				}
+			}
+		}else if(val == "5"){
+			for(var i=0;i<maxPls.length;i++){
+				if(i>0){
+					if(maxPls[i] >= 5){
+						document.getElementById("game"+i).style.display = "block";
+					}else{
+						document.getElementById("game"+i).style.display = "none";
+					}
+				}
+			}
+		}else{
+			for(var i=0;i<minPls.length;i++){
+				if(i>0){
+					if(minPls[i] <= val && maxPls[i] >= val){
+						document.getElementById("game"+i).style.display = "block";
+					}else{
+						document.getElementById("game"+i).style.display = "none";
+					}
+				}
+			}
+		}
+	}
+	
+</script>
+<head>
+<meta charset="EUC-KR">
+<title>보드게임 메뉴판</title>
+</head>
+<body>
+	인원수 : 
+	<select onchange="chgPlayers(this.value)">
+		<option value="0">---</option>
+		<option value="1">1명</option>
+		<option value="2">2명</option>
+		<option value="3">3명</option>
+		<option value="4">4명</option>
+		<option value="5">5명이상</option>
+	</select>
+	<table id="game1">
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/catan.png">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				카탄 (Catan)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 3~4명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 60~80분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				가장 유명한 보드게임이라 볼 수 있는 보드게임의 클래식 카탄.<br>
+				카탄이라는 무인도에서 각 부족들이 자신의 세력을 넓혀서,<br>
+				카탄의 진정한 정착자가 되려 하는 것이 이 게임의 목적이다.<br>
+				게임의 중요 요소는 건축, 거래이다.
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game2">
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/citadels.png">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				시타델 (Citadels)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~8명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 20~40분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				플레이어들은 각각 중세 유럽의 영주가 되어 자신들의 도시를 번영시켜야 한다.<br>
+				게임의 중요 요소는 건축, 속임수(블러핑)이다.
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game3">
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/splendor.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				스플렌더 (Splendor)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~4명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 30분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				보석을 구매하여 카드를 모아 승점 15점을 먼저 모으는 사람이 이긴다.<br>
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game4">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/bohnan.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				보난자 (Bohnanza)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 3~5명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 45분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				콩을 심고 물물교환하고 수확해 팔아서 떼돈을 버는 게임이다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game5">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/loveletter.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				러브레터 (Love Letter)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~6명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 20분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				16장 카드의 효과들을 활용하여 견제와 심리전 등을 통해 승자를 가려내는 게임이다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game6">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/ciao.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				차오차오 (Ciao Ciao)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~5명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 20분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				모두가 먼저 가기 위해서 서로에게 거짓말을 하지만, 거짓말이 들통나는 순간 그 사람은 다리 밑으로 밀려 떨어진다.<br> 
+				다리 밑에서 기다리는 식인 식물들의 입으로 추락해 가는 거짓말쟁이를 향해 비정한 인사말이 던져진다. 챠오챠오~
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game7">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/clue.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				클루 (Clue)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~6명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 45분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				대저택 안에서 벌어진 살인사건의 용의자를 추리하는 게임이다. 모든 플레이어는 용의자이며 각자가 탐정이기도 하다.<br>
+				플레이어들은 서로서로 심문하며 범인과 범행에 사용된 흉기, 살인이 일어난 장소를 찾아야 한다.
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game8">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/hali.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				할리갈리 (Halli Galli)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~6명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 15분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				같은 과일이 다섯 개가 보이면 종을 쳐라 라는 한 마디로 압축되는 간단한 규칙, 속도 경쟁에서 승리하기 위해 극도의 집중력을 요구한다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game9">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/hali_ring.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				할리갈리 링엘딩 (Halli Galli Ring L ding)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~6명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 10분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				순발력 만점 가족게임으로 손가락에 형형색색 고리를 끼우는 눈이 즐거운 게임<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game10">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/rummikub.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				루미큐브 (RummiKub)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~4명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 60분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				게임을 시작할 때 14장씩 패를 나누어 가져 시작하며, <br>
+				족보에 맞는 순서대로 패를 테이블 중앙에 내거나 혹은 패를 하나 가져오거나 하는 식으로 순서를 진행하여 <br>
+				제일 먼저 자신의 패를 모두 내려놓는 사람이 이기는 게임이다.
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game11">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/lobo77.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				로보77 (Lobo77)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~8명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 30분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				원카드와 비슷한 형식의 일종으로, <br>
+				룰도 간단하고 오로지 숫자 계산으로만 진행하는 것이 특징이다.
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game12">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/penguin.png">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				펭귄얼음깨기
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~4명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 10~20분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				육각형의 얼음판들을 깨가면서 펭귄을 먼저 떨어트리는 사람이 패배!<br>
+				간단하게 즐기기 좋은 게임이다.
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game13">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/gemblo.png">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				젬블로 (Gemblo)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~6명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 20분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				육각형의 게임판 위에 차례마다 자신의 블록을 하나씩 내려놓는 보드게임이다. <br>
+				최대한 상대방의 길을 끊고 나의 길을 확보해 최종적으로 내 블록을 가장 많이 올려놓는 것이 목표다.
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game14">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/mara.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				마라캐시
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~4명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 20~30분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				마라케시 양탄자시장을 배경으로 알록달록 양탄자를 누구보다 많이 진열하고 많이 팔아야 승리를 하는 게임이다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game15">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/bluemarble.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				부루마블 (Blue Marble)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~4명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 60~120분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				보드상의 땅을 구입하면서 그 이용료로 모든 상대 플레이어를 파산시키면 승리하는 게임이다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game16">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/dixit.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				딕싯 (Dixit)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 3~6명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 30분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				다양한 그림이 그려진 카드를 뽑은 후, 그에 대한 간단한 설명을 듣고 진열된 카드 중에서 해당 카드가 무엇인지 맞추는 게임이다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game17">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/potion.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				포션폭발 (Potion Explosion)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~4명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 30~45분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				구슬들이 맞닿아 폭발한다! 마법의 물약을 만들자!<br>
+				전설의 재료들을 사용해 최대한 많은 물약을 만들어 점수를 획득하는 게임이다.
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game18">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/diamond.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				다이아몬드 (Diamond)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~3명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 15~30분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				2~3인이 할 수 있는 추상전략 보드게임으로, 중국식 체스와 비슷하다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game19">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/rushhour.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				러시아워 (Rush hour)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 1명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> -분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				자동차로 가득찬 주차장에서 주인공의 자동차를 탈출시키는 1인용 보드게임이다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game20">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/iq.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				IQ퍼즐게임 (IQ Puzzle)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 1명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> -분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				120문제를 담은 퍼즐 게임이다.<br>
+				게임판에 주어진 블록을 다 놓으면 성공!
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game21">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/dobble.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				도블 (Dobble)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~8명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 15분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				다른 사람보다 먼저 내 카드에 있는 그림과 같은 그림을 찾아 카드를 가져오거나 버리는 게임.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game22">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/baduk.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				바둑
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 60~120분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				상하종횡으로 각 19줄이 그려져 있는 평평한 바둑판에 두 명의 사람이 바둑돌을 선의 교차점에 교대로 번갈아 두며 즐기는 게임이다.<br>
+				
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game23">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/chess.jpg">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				체스 (Chess)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 60~120분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				2인용 보드 게임. 보통 두 사람이 마주 앉아 체크 무늬의 판과 특별한 모양으로 만들어진 말을 사용, <br>
+				각각의 말을 그 종류에 따라 각기 다른 행마법에 의해 움직여 상대방의 최고 말인 킹(king)을 옴짝달싹할 수 없이 잡힐 수밖에 없는 상황으로 몰아넣는 것이 목표이다. 
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game24">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/stickstack.png">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30">
+				스틱스택 (Srick Stack)
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~10명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 10~30분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				스틱을 떨어트리지 않거나 타워를 쓰러트리지 않고 스틱을 쌓아라! <br>
+				게임이 끝날때 가장 낮은 점수를 가진자가 우승!! 
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+</body>
+</html>
