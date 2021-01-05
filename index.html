@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+
+	var nation = ["네팔", "대한민국", "동티모르", "라오스", "레바논"
+		                  ,"말레이시아", "몰디브" , "몽골", "미얀마", "바레인"];
+	
+	var capital = ["카트만두", "서울", "딜리", "비엔티안", "베이루트"
+        ,"쿠알라룸푸르", "말레" , "울란바토르", "네피도", "마나마"];
+
+	function init(){
+		randCap();
+	}
+	
+	var result;
+
+ 	function randCap(){
+		result = Math.floor(Math.random() * 100) % 10;
+		//alert(result);
+		//document.write(result);
+		document.getElementById("sp_na").innerHTML = nation[result];
+ 	}
+ 	
+ 	function chkAns(){
+ 		if(document.getElementById("ans").value == ""){
+ 			alert("정답을 입력해주세요.");
+ 			return;
+ 		}
+ 		
+ 		if(document.getElementById("ans").value == capital[result]){
+ 			document.getElementById("sp_ac").innerHTML = "정답!!!!!   ";	
+ 		}else{
+ 			document.getElementById("sp_ac").innerHTML = "오답ㅠㅠ   ";
+ 			document.getElementById("sp_ca").innerHTML = "정답은 "+capital[result];
+ 		}
+ 	}
+ 	
+ 	function submitEvent(){
+		if (event.keyCode == 13) {                                // 엔터 키값은 13 입니다.
+			chkAns();
+		}
+	}
+
+</script>
+
+<head>
+<meta charset="UTF-8">
+<title>나라별 수도 맞추기</title>
+</head>
+<body onload="init()">
+	<span id="sp_na"></span>의 수도는?&nbsp;&nbsp;<input type="text" id="ans" value="" onkeypress="submitEvent()">
+	<br>
+	<span id="sp_ac"></span> <span id="sp_ca"></span>
+	
+	<br><br>
+	<input type="button" value="정답 제출" onclick="chkAns()">
+	<br><br>
+	<input type="button" value="다른 문제" onclick="document.location.href='nation_capital.html'">
+</body>
+</html>
