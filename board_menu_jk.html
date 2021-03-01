@@ -15,11 +15,11 @@
 	        		,8,2,2,10];
 	
 	var gameNms = [""
-			        ,"Ä«Åº (Catan)","½ÃÅ¸µ¨ (Citadels)","½ºÇÃ·»´õ (Splendor)","º¸³­ÀÚ (Bohnanza)","·¯ºê·¹ÅÍ (Love Letter)"
-			        ,"Â÷¿ÀÂ÷¿À (Ciao Ciao)","Å¬·ç (Clue)","ÇÒ¸®°¥¸® (Halli Galli)","ÇÒ¸®°¥¸® ¸µ¿¤µù (Halli Galli Ring L ding)","·ç¹ÌÅ¥ºê (RummiKub)"
-			        ,"·Îº¸77 (Lobo77)","Æë±Ï¾óÀ½±ú±â","Áªºí·Î (Gemblo)","¸ÇÇØÆ°","ºÎ·ç¸¶ºí (Blue Marble)"
-			        ,"µñ½Ë (Dixit)","Æ÷¼ÇÆø¹ß (Potion Explosion)","´ÙÀÌ¾Æ¸óµå (Diamond)","·¯½Ã¾Æ¿ö (Rush hour)","IQÆÛÁñ°ÔÀÓ (IQ Puzzle)"
-			        ,"µµºí (Dobble)","¹ÙµÏ","Ã¼½º (Chess)","½ºÆ½½ºÅÃ (Srick Stack)"];
+			        ,"ì¹´íƒ„ (Catan)","ì‹œíƒ€ë¸ (Citadels)","ìŠ¤í”Œë Œë” (Splendor)","ë³´ë‚œìž (Bohnanza)","ëŸ¬ë¸Œë ˆí„° (Love Letter)"
+			        ,"ì°¨ì˜¤ì°¨ì˜¤ (Ciao Ciao)","í´ë£¨ (Clue)","í• ë¦¬ê°ˆë¦¬ (Halli Galli)","í• ë¦¬ê°ˆë¦¬ ë§ì—˜ë”© (Halli Galli Ring L ding)","ë£¨ë¯¸íë¸Œ (RummiKub)"
+			        ,"ë¡œë³´77 (Lobo77)","íŽ­ê·„ì–¼ìŒê¹¨ê¸°","ì ¬ë¸”ë¡œ (Gemblo)","ë§¨í•´íŠ¼","ë¶€ë£¨ë§ˆë¸” (Blue Marble)"
+			        ,"ë”•ì‹¯ (Dixit)","í¬ì…˜í­ë°œ (Potion Explosion)","ë‹¤ì´ì•„ëª¬ë“œ (Diamond)","ëŸ¬ì‹œì•„ì›Œ (Rush hour)","IQí¼ì¦ê²Œìž„ (IQ Puzzle)"
+			        ,"ë„ë¸” (Dobble)","ë°”ë‘‘","ì²´ìŠ¤ (Chess)","ìŠ¤í‹±ìŠ¤íƒ (Srick Stack)"];
 	
 	var imgNms = [""
 			        ,"catan.png","citadels.png","splendor.jpg","bohnan.jpg","loveletter.jpg"
@@ -29,10 +29,10 @@
 			        ,"dobble.jpg","baduk.jpg","chess.jpg","stickstack.png"];
 	
 	/**
-		È­¸é ÃÊ±âÈ­
-		±â´É:
-			1. °ÔÀÓ ÀÌ¹ÌÁö Ç¥½Ã
-			2. °ÔÀÓ Á¦¸ñ Ç¥½Ã
+		í™”ë©´ ì´ˆê¸°í™”
+		ê¸°ëŠ¥:
+			1. ê²Œìž„ ì´ë¯¸ì§€ í‘œì‹œ
+			2. ê²Œìž„ ì œëª© í‘œì‹œ
 	**/
 	function init(){
 		for(var i=0;i<minPls.length;i++){
@@ -75,7 +75,7 @@
 	
 	function randomSelGame(){
 		if(document.getElementById("plyNum").value == "0"){
-			alert("ÀÎ¿ø¼ö¸¦ ¼±ÅÃÇÏ½Ã¿À.");
+			alert("ì¸ì›ìˆ˜ë¥¼ ì„ íƒí•˜ì‹œì˜¤.");
 			return;
 		}
 		
@@ -83,7 +83,7 @@
 		
 		var flag = true;
 		
-		//ÀÎ¿ø¼ö¿¡ ¸Â´Â °ÔÀÓ¸¸ Ç¥½ÃÇÑ´Ù.
+		//ì¸ì›ìˆ˜ì— ë§žëŠ” ê²Œìž„ë§Œ í‘œì‹œí•œë‹¤.
 		while (flag) {
 			result = Math.floor(Math.random() * 100) % (maxPls.length-1);
 			result = result + 1;
@@ -103,15 +103,15 @@
 		*/
 		
 		
-		//document.getElementById("selG").innerHTML = "<br>[·£´ý ¼±ÅÃµÈ °ÔÀÓ¸í: <b><u>" + gameNms[result] + "</b></u>]";
+		//document.getElementById("selG").innerHTML = "<br>[ëžœë¤ ì„ íƒëœ ê²Œìž„ëª…: <b><u>" + gameNms[result] + "</b></u>]";
 		//document.getElementById("randGame_img").src = "./img/"+ imgNms[result];
 		//document.getElementById("randGame_img").style.border = "5px solid red";
 		//document.getElementById("selG_t").innerHTML = "<br>";
 	}
 	
-	//·£´ý °ÔÀÓ Ç¥½Ã
+	//ëžœë¤ ê²Œìž„ í‘œì‹œ
 	function dispRanGame(idx){
-		document.getElementById("selG").innerHTML = "<br>[·£´ý ¼±ÅÃµÈ °ÔÀÓ¸í: <b><u>" + gameNms[idx] + "</b></u>]";
+		document.getElementById("selG").innerHTML = "<br>[ëžœë¤ ì„ íƒëœ ê²Œìž„ëª…: <b><u>" + gameNms[idx] + "</b></u>]";
 		document.getElementById("randGame_img").src = "./img/"+ imgNms[idx];
 		document.getElementById("randGame_img").style.border = "5px solid red";
 		document.getElementById("selG_t").innerHTML = "<br>";
@@ -120,19 +120,19 @@
 </script>
 <head>
 <meta charset="EUC-KR">
-<title>º¸µå°ÔÀÓ ¸Þ´ºÆÇ</title>
+<title>ë³´ë“œê²Œìž„ ë©”ë‰´íŒ</title>
 </head>
 <body onload="init()">
-	ÀÎ¿ø¼ö : 
+	ì¸ì›ìˆ˜ : 
 	<select onchange="chgPlayers(this.value)" id="plyNum">
 		<option value="0">---</option>
-		<option value="1">1¸í</option>
-		<option value="2">2¸í</option>
-		<option value="3">3¸í</option>
-		<option value="4">4¸í</option>
-		<option value="5">5¸íÀÌ»ó</option>
+		<option value="1">1ëª…</option>
+		<option value="2">2ëª…</option>
+		<option value="3">3ëª…</option>
+		<option value="4">4ëª…</option>
+		<option value="5">5ëª…ì´ìƒ</option>
 	</select>
-	<input type="button" onclick="randomSelGame()" value="·£´ý °ÔÀÓ ¼±ÅÃ">	
+	<input type="button" onclick="randomSelGame()" value="ëžœë¤ ê²Œìž„ ì„ íƒ">	
 	<div>
 		<div id="selG"></div>
 		<img id="randGame_img">
@@ -149,20 +149,20 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 3~4¸í
+				<img src="./img/user.png" align="middle"> 3~4ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 60~80ºÐ
+				<img src="./img/clock.png" align="middle"> 60~80ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				°¡Àå À¯¸íÇÑ º¸µå°ÔÀÓÀÌ¶ó º¼ ¼ö ÀÖ´Â º¸µå°ÔÀÓÀÇ Å¬·¡½Ä Ä«Åº.<br>
-				Ä«ÅºÀÌ¶ó´Â ¹«ÀÎµµ¿¡¼­ °¢ ºÎÁ·µéÀÌ ÀÚ½ÅÀÇ ¼¼·ÂÀ» ³ÐÇô¼­,<br>
-				Ä«ÅºÀÇ ÁøÁ¤ÇÑ Á¤ÂøÀÚ°¡ µÇ·Á ÇÏ´Â °ÍÀÌ ÀÌ °ÔÀÓÀÇ ¸ñÀûÀÌ´Ù.<br>
-				°ÔÀÓÀÇ Áß¿ä ¿ä¼Ò´Â °ÇÃà, °Å·¡ÀÌ´Ù.
+				ê°€ìž¥ ìœ ëª…í•œ ë³´ë“œê²Œìž„ì´ë¼ ë³¼ ìˆ˜ ìžˆëŠ” ë³´ë“œê²Œìž„ì˜ í´ëž˜ì‹ ì¹´íƒ„.<br>
+				ì¹´íƒ„ì´ë¼ëŠ” ë¬´ì¸ë„ì—ì„œ ê° ë¶€ì¡±ë“¤ì´ ìžì‹ ì˜ ì„¸ë ¥ì„ ë„“í˜€ì„œ,<br>
+				ì¹´íƒ„ì˜ ì§„ì •í•œ ì •ì°©ìžê°€ ë˜ë ¤ í•˜ëŠ” ê²ƒì´ ì´ ê²Œìž„ì˜ ëª©ì ì´ë‹¤.<br>
+				ê²Œìž„ì˜ ì¤‘ìš” ìš”ì†ŒëŠ” ê±´ì¶•, ê±°ëž˜ì´ë‹¤.
 			</td>
 		</tr>
 		
@@ -181,18 +181,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~8¸í
+				<img src="./img/user.png" align="middle"> 2~8ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 20~40ºÐ
+				<img src="./img/clock.png" align="middle"> 20~40ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				ÇÃ·¹ÀÌ¾îµéÀº °¢°¢ Áß¼¼ À¯·´ÀÇ ¿µÁÖ°¡ µÇ¾î ÀÚ½ÅµéÀÇ µµ½Ã¸¦ ¹ø¿µ½ÃÄÑ¾ß ÇÑ´Ù.<br>
-				°ÔÀÓÀÇ Áß¿ä ¿ä¼Ò´Â °ÇÃà, ¼ÓÀÓ¼ö(ºí·¯ÇÎ)ÀÌ´Ù.
+				í”Œë ˆì´ì–´ë“¤ì€ ê°ê° ì¤‘ì„¸ ìœ ëŸ½ì˜ ì˜ì£¼ê°€ ë˜ì–´ ìžì‹ ë“¤ì˜ ë„ì‹œë¥¼ ë²ˆì˜ì‹œì¼œì•¼ í•œë‹¤.<br>
+				ê²Œìž„ì˜ ì¤‘ìš” ìš”ì†ŒëŠ” ê±´ì¶•, ì†ìž„ìˆ˜(ë¸”ëŸ¬í•‘)ì´ë‹¤.
 			</td>
 		</tr>
 		
@@ -211,17 +211,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~4¸í
+				<img src="./img/user.png" align="middle"> 2~4ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 30ºÐ
+				<img src="./img/clock.png" align="middle"> 30ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				º¸¼®À» ±¸¸ÅÇÏ¿© Ä«µå¸¦ ¸ð¾Æ ½ÂÁ¡ 15Á¡À» ¸ÕÀú ¸ðÀ¸´Â »ç¶÷ÀÌ ÀÌ±ä´Ù.<br>
+				ë³´ì„ì„ êµ¬ë§¤í•˜ì—¬ ì¹´ë“œë¥¼ ëª¨ì•„ ìŠ¹ì  15ì ì„ ë¨¼ì € ëª¨ìœ¼ëŠ” ì‚¬ëžŒì´ ì´ê¸´ë‹¤.<br>
 			</td>
 		</tr>
 		
@@ -240,17 +240,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 3~5¸í
+				<img src="./img/user.png" align="middle"> 3~5ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 45ºÐ
+				<img src="./img/clock.png" align="middle"> 45ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				ÄáÀ» ½É°í ¹°¹°±³È¯ÇÏ°í ¼öÈ®ÇØ ÆÈ¾Æ¼­ ¶¼µ·À» ¹ö´Â °ÔÀÓÀÌ´Ù.<br>
+				ì½©ì„ ì‹¬ê³  ë¬¼ë¬¼êµí™˜í•˜ê³  ìˆ˜í™•í•´ íŒ”ì•„ì„œ ë–¼ëˆì„ ë²„ëŠ” ê²Œìž„ì´ë‹¤.<br>
 				
 			</td>
 		</tr>
@@ -270,17 +270,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~6¸í
+				<img src="./img/user.png" align="middle"> 2~6ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 20ºÐ
+				<img src="./img/clock.png" align="middle"> 20ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				16Àå Ä«µåÀÇ È¿°úµéÀ» È°¿ëÇÏ¿© °ßÁ¦¿Í ½É¸®Àü µîÀ» ÅëÇØ ½ÂÀÚ¸¦ °¡·Á³»´Â °ÔÀÓÀÌ´Ù.<br>
+				16ìž¥ ì¹´ë“œì˜ íš¨ê³¼ë“¤ì„ í™œìš©í•˜ì—¬ ê²¬ì œì™€ ì‹¬ë¦¬ì „ ë“±ì„ í†µí•´ ìŠ¹ìžë¥¼ ê°€ë ¤ë‚´ëŠ” ê²Œìž„ì´ë‹¤.<br>
 				
 			</td>
 		</tr>
@@ -300,18 +300,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~5¸í
+				<img src="./img/user.png" align="middle"> 2~5ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 20ºÐ
+				<img src="./img/clock.png" align="middle"> 20ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				¸ðµÎ°¡ ¸ÕÀú °¡±â À§ÇØ¼­ ¼­·Î¿¡°Ô °ÅÁþ¸»À» ÇÏÁö¸¸, °ÅÁþ¸»ÀÌ µéÅë³ª´Â ¼ø°£ ±× »ç¶÷Àº ´Ù¸® ¹ØÀ¸·Î ¹Ð·Á ¶³¾îÁø´Ù.<br> 
-				´Ù¸® ¹Ø¿¡¼­ ±â´Ù¸®´Â ½ÄÀÎ ½Ä¹°µéÀÇ ÀÔÀ¸·Î Ãß¶ôÇØ °¡´Â °ÅÁþ¸»ÀïÀÌ¸¦ ÇâÇØ ºñÁ¤ÇÑ ÀÎ»ç¸»ÀÌ ´øÁ®Áø´Ù. Ã­¿ÀÃ­¿À~
+				ëª¨ë‘ê°€ ë¨¼ì € ê°€ê¸° ìœ„í•´ì„œ ì„œë¡œì—ê²Œ ê±°ì§“ë§ì„ í•˜ì§€ë§Œ, ê±°ì§“ë§ì´ ë“¤í†µë‚˜ëŠ” ìˆœê°„ ê·¸ ì‚¬ëžŒì€ ë‹¤ë¦¬ ë°‘ìœ¼ë¡œ ë°€ë ¤ ë–¨ì–´ì§„ë‹¤.<br> 
+				ë‹¤ë¦¬ ë°‘ì—ì„œ ê¸°ë‹¤ë¦¬ëŠ” ì‹ì¸ ì‹ë¬¼ë“¤ì˜ ìž…ìœ¼ë¡œ ì¶”ë½í•´ ê°€ëŠ” ê±°ì§“ë§ìŸì´ë¥¼ í–¥í•´ ë¹„ì •í•œ ì¸ì‚¬ë§ì´ ë˜ì ¸ì§„ë‹¤. ì± ì˜¤ì± ì˜¤~
 			</td>
 		</tr>
 		
@@ -330,18 +330,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~6¸í
+				<img src="./img/user.png" align="middle"> 2~6ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 45ºÐ
+				<img src="./img/clock.png" align="middle"> 45ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				´ëÀúÅÃ ¾È¿¡¼­ ¹ú¾îÁø »ìÀÎ»ç°ÇÀÇ ¿ëÀÇÀÚ¸¦ Ãß¸®ÇÏ´Â °ÔÀÓÀÌ´Ù. ¸ðµç ÇÃ·¹ÀÌ¾î´Â ¿ëÀÇÀÚÀÌ¸ç °¢ÀÚ°¡ Å½Á¤ÀÌ±âµµ ÇÏ´Ù.<br>
-				ÇÃ·¹ÀÌ¾îµéÀº ¼­·Î¼­·Î ½É¹®ÇÏ¸ç ¹üÀÎ°ú ¹üÇà¿¡ »ç¿ëµÈ Èä±â, »ìÀÎÀÌ ÀÏ¾î³­ Àå¼Ò¸¦ Ã£¾Æ¾ß ÇÑ´Ù.
+				ëŒ€ì €íƒ ì•ˆì—ì„œ ë²Œì–´ì§„ ì‚´ì¸ì‚¬ê±´ì˜ ìš©ì˜ìžë¥¼ ì¶”ë¦¬í•˜ëŠ” ê²Œìž„ì´ë‹¤. ëª¨ë“  í”Œë ˆì´ì–´ëŠ” ìš©ì˜ìžì´ë©° ê°ìžê°€ íƒì •ì´ê¸°ë„ í•˜ë‹¤.<br>
+				í”Œë ˆì´ì–´ë“¤ì€ ì„œë¡œì„œë¡œ ì‹¬ë¬¸í•˜ë©° ë²”ì¸ê³¼ ë²”í–‰ì— ì‚¬ìš©ëœ í‰ê¸°, ì‚´ì¸ì´ ì¼ì–´ë‚œ ìž¥ì†Œë¥¼ ì°¾ì•„ì•¼ í•œë‹¤.
 			</td>
 		</tr>
 		
@@ -360,17 +360,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~6¸í
+				<img src="./img/user.png" align="middle"> 2~6ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 15ºÐ
+				<img src="./img/clock.png" align="middle"> 15ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				°°Àº °úÀÏÀÌ ´Ù¼¸ °³°¡ º¸ÀÌ¸é Á¾À» ÃÄ¶ó ¶ó´Â ÇÑ ¸¶µð·Î ¾ÐÃàµÇ´Â °£´ÜÇÑ ±ÔÄ¢, ¼Óµµ °æÀï¿¡¼­ ½Â¸®ÇÏ±â À§ÇØ ±ØµµÀÇ ÁýÁß·ÂÀ» ¿ä±¸ÇÑ´Ù.<br>
+				ê°™ì€ ê³¼ì¼ì´ ë‹¤ì„¯ ê°œê°€ ë³´ì´ë©´ ì¢…ì„ ì³ë¼ ë¼ëŠ” í•œ ë§ˆë””ë¡œ ì••ì¶•ë˜ëŠ” ê°„ë‹¨í•œ ê·œì¹™, ì†ë„ ê²½ìŸì—ì„œ ìŠ¹ë¦¬í•˜ê¸° ìœ„í•´ ê·¹ë„ì˜ ì§‘ì¤‘ë ¥ì„ ìš”êµ¬í•œë‹¤.<br>
 				
 			</td>
 		</tr>
@@ -390,17 +390,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~6¸í
+				<img src="./img/user.png" align="middle"> 2~6ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 10ºÐ
+				<img src="./img/clock.png" align="middle"> 10ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				¼ø¹ß·Â ¸¸Á¡ °¡Á·°ÔÀÓÀ¸·Î ¼Õ°¡¶ô¿¡ ÇüÇü»ö»ö °í¸®¸¦ ³¢¿ì´Â ´«ÀÌ Áñ°Å¿î °ÔÀÓ<br>
+				ìˆœë°œë ¥ ë§Œì  ê°€ì¡±ê²Œìž„ìœ¼ë¡œ ì†ê°€ë½ì— í˜•í˜•ìƒ‰ìƒ‰ ê³ ë¦¬ë¥¼ ë¼ìš°ëŠ” ëˆˆì´ ì¦ê±°ìš´ ê²Œìž„<br>
 				
 			</td>
 		</tr>
@@ -420,19 +420,19 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~4¸í
+				<img src="./img/user.png" align="middle"> 2~4ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 60ºÐ
+				<img src="./img/clock.png" align="middle"> 60ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				°ÔÀÓÀ» ½ÃÀÛÇÒ ¶§ 14Àå¾¿ ÆÐ¸¦ ³ª´©¾î °¡Á® ½ÃÀÛÇÏ¸ç, <br>
-				Á·º¸¿¡ ¸Â´Â ¼ø¼­´ë·Î ÆÐ¸¦ Å×ÀÌºí Áß¾Ó¿¡ ³»°Å³ª È¤Àº ÆÐ¸¦ ÇÏ³ª °¡Á®¿À°Å³ª ÇÏ´Â ½ÄÀ¸·Î ¼ø¼­¸¦ ÁøÇàÇÏ¿© <br>
-				Á¦ÀÏ ¸ÕÀú ÀÚ½ÅÀÇ ÆÐ¸¦ ¸ðµÎ ³»·Á³õ´Â »ç¶÷ÀÌ ÀÌ±â´Â °ÔÀÓÀÌ´Ù.
+				ê²Œìž„ì„ ì‹œìž‘í•  ë•Œ 14ìž¥ì”© íŒ¨ë¥¼ ë‚˜ëˆ„ì–´ ê°€ì ¸ ì‹œìž‘í•˜ë©°, <br>
+				ì¡±ë³´ì— ë§žëŠ” ìˆœì„œëŒ€ë¡œ íŒ¨ë¥¼ í…Œì´ë¸” ì¤‘ì•™ì— ë‚´ê±°ë‚˜ í˜¹ì€ íŒ¨ë¥¼ í•˜ë‚˜ ê°€ì ¸ì˜¤ê±°ë‚˜ í•˜ëŠ” ì‹ìœ¼ë¡œ ìˆœì„œë¥¼ ì§„í–‰í•˜ì—¬ <br>
+				ì œì¼ ë¨¼ì € ìžì‹ ì˜ íŒ¨ë¥¼ ëª¨ë‘ ë‚´ë ¤ë†“ëŠ” ì‚¬ëžŒì´ ì´ê¸°ëŠ” ê²Œìž„ì´ë‹¤.
 			</td>
 		</tr>
 		
@@ -451,18 +451,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~8¸í
+				<img src="./img/user.png" align="middle"> 2~8ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 30ºÐ
+				<img src="./img/clock.png" align="middle"> 30ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				¿øÄ«µå¿Í ºñ½ÁÇÑ Çü½ÄÀÇ ÀÏÁ¾À¸·Î, <br>
-				·êµµ °£´ÜÇÏ°í ¿À·ÎÁö ¼ýÀÚ °è»êÀ¸·Î¸¸ ÁøÇàÇÏ´Â °ÍÀÌ Æ¯Â¡ÀÌ´Ù.
+				ì›ì¹´ë“œì™€ ë¹„ìŠ·í•œ í˜•ì‹ì˜ ì¼ì¢…ìœ¼ë¡œ, <br>
+				ë£°ë„ ê°„ë‹¨í•˜ê³  ì˜¤ë¡œì§€ ìˆ«ìž ê³„ì‚°ìœ¼ë¡œë§Œ ì§„í–‰í•˜ëŠ” ê²ƒì´ íŠ¹ì§•ì´ë‹¤.
 			</td>
 		</tr>
 		
@@ -481,18 +481,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~4¸í
+				<img src="./img/user.png" align="middle"> 2~4ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 10~20ºÐ
+				<img src="./img/clock.png" align="middle"> 10~20ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				À°°¢ÇüÀÇ ¾óÀ½ÆÇµéÀ» ±ú°¡¸é¼­ Æë±ÏÀ» ¸ÕÀú ¶³¾îÆ®¸®´Â »ç¶÷ÀÌ ÆÐ¹è!<br>
-				°£´ÜÇÏ°Ô Áñ±â±â ÁÁÀº °ÔÀÓÀÌ´Ù.
+				ìœ¡ê°í˜•ì˜ ì–¼ìŒíŒë“¤ì„ ê¹¨ê°€ë©´ì„œ íŽ­ê·„ì„ ë¨¼ì € ë–¨ì–´íŠ¸ë¦¬ëŠ” ì‚¬ëžŒì´ íŒ¨ë°°!<br>
+				ê°„ë‹¨í•˜ê²Œ ì¦ê¸°ê¸° ì¢‹ì€ ê²Œìž„ì´ë‹¤.
 			</td>
 		</tr>
 		
@@ -511,18 +511,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~6¸í
+				<img src="./img/user.png" align="middle"> 2~6ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 20ºÐ
+				<img src="./img/clock.png" align="middle"> 20ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				À°°¢ÇüÀÇ °ÔÀÓÆÇ À§¿¡ Â÷·Ê¸¶´Ù ÀÚ½ÅÀÇ ºí·ÏÀ» ÇÏ³ª¾¿ ³»·Á³õ´Â º¸µå°ÔÀÓÀÌ´Ù. <br>
-				ÃÖ´ëÇÑ »ó´ë¹æÀÇ ±æÀ» ²÷°í ³ªÀÇ ±æÀ» È®º¸ÇØ ÃÖÁ¾ÀûÀ¸·Î ³» ºí·ÏÀ» °¡Àå ¸¹ÀÌ ¿Ã·Á³õ´Â °ÍÀÌ ¸ñÇ¥´Ù.
+				ìœ¡ê°í˜•ì˜ ê²Œìž„íŒ ìœ„ì— ì°¨ë¡€ë§ˆë‹¤ ìžì‹ ì˜ ë¸”ë¡ì„ í•˜ë‚˜ì”© ë‚´ë ¤ë†“ëŠ” ë³´ë“œê²Œìž„ì´ë‹¤. <br>
+				ìµœëŒ€í•œ ìƒëŒ€ë°©ì˜ ê¸¸ì„ ëŠê³  ë‚˜ì˜ ê¸¸ì„ í™•ë³´í•´ ìµœì¢…ì ìœ¼ë¡œ ë‚´ ë¸”ë¡ì„ ê°€ìž¥ ë§Žì´ ì˜¬ë ¤ë†“ëŠ” ê²ƒì´ ëª©í‘œë‹¤.
 			</td>
 		</tr>
 		
@@ -541,17 +541,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~4¸í
+				<img src="./img/user.png" align="middle"> 2~4ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 20~30ºÐ
+				<img src="./img/clock.png" align="middle"> 20~30ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				Àü·«ÀûÀ¸·Î ºôµùÀ» ¼¼¿ö µæÁ¡ÇÏ¿© °íµæÁ¡ÀÌ ½Â¸®ÇÏ´Â °ÔÀÓ.<br>
+				ì „ëžµì ìœ¼ë¡œ ë¹Œë”©ì„ ì„¸ì›Œ ë“ì í•˜ì—¬ ê³ ë“ì ì´ ìŠ¹ë¦¬í•˜ëŠ” ê²Œìž„.<br>
 				
 			</td>
 		</tr>
@@ -571,17 +571,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~4¸í
+				<img src="./img/user.png" align="middle"> 2~4ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 60~120ºÐ
+				<img src="./img/clock.png" align="middle"> 60~120ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				º¸µå»óÀÇ ¶¥À» ±¸ÀÔÇÏ¸é¼­ ±× ÀÌ¿ë·á·Î ¸ðµç »ó´ë ÇÃ·¹ÀÌ¾î¸¦ ÆÄ»ê½ÃÅ°¸é ½Â¸®ÇÏ´Â °ÔÀÓÀÌ´Ù.<br>
+				ë³´ë“œìƒì˜ ë•…ì„ êµ¬ìž…í•˜ë©´ì„œ ê·¸ ì´ìš©ë£Œë¡œ ëª¨ë“  ìƒëŒ€ í”Œë ˆì´ì–´ë¥¼ íŒŒì‚°ì‹œí‚¤ë©´ ìŠ¹ë¦¬í•˜ëŠ” ê²Œìž„ì´ë‹¤.<br>
 				
 			</td>
 		</tr>
@@ -601,17 +601,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 3~6¸í
+				<img src="./img/user.png" align="middle"> 3~6ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 30ºÐ
+				<img src="./img/clock.png" align="middle"> 30ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				´Ù¾çÇÑ ±×¸²ÀÌ ±×·ÁÁø Ä«µå¸¦ »ÌÀº ÈÄ, ±×¿¡ ´ëÇÑ °£´ÜÇÑ ¼³¸íÀ» µè°í Áø¿­µÈ Ä«µå Áß¿¡¼­ ÇØ´ç Ä«µå°¡ ¹«¾ùÀÎÁö ¸ÂÃß´Â °ÔÀÓÀÌ´Ù.<br>
+				ë‹¤ì–‘í•œ ê·¸ë¦¼ì´ ê·¸ë ¤ì§„ ì¹´ë“œë¥¼ ë½‘ì€ í›„, ê·¸ì— ëŒ€í•œ ê°„ë‹¨í•œ ì„¤ëª…ì„ ë“£ê³  ì§„ì—´ëœ ì¹´ë“œ ì¤‘ì—ì„œ í•´ë‹¹ ì¹´ë“œê°€ ë¬´ì—‡ì¸ì§€ ë§žì¶”ëŠ” ê²Œìž„ì´ë‹¤.<br>
 				
 			</td>
 		</tr>
@@ -631,18 +631,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~4¸í
+				<img src="./img/user.png" align="middle"> 2~4ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 30~45ºÐ
+				<img src="./img/clock.png" align="middle"> 30~45ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				±¸½½µéÀÌ ¸Â´ê¾Æ Æø¹ßÇÑ´Ù! ¸¶¹ýÀÇ ¹°¾àÀ» ¸¸µéÀÚ!<br>
-				Àü¼³ÀÇ Àç·áµéÀ» »ç¿ëÇØ ÃÖ´ëÇÑ ¸¹Àº ¹°¾àÀ» ¸¸µé¾î Á¡¼ö¸¦ È¹µæÇÏ´Â °ÔÀÓÀÌ´Ù.
+				êµ¬ìŠ¬ë“¤ì´ ë§žë‹¿ì•„ í­ë°œí•œë‹¤! ë§ˆë²•ì˜ ë¬¼ì•½ì„ ë§Œë“¤ìž!<br>
+				ì „ì„¤ì˜ ìž¬ë£Œë“¤ì„ ì‚¬ìš©í•´ ìµœëŒ€í•œ ë§Žì€ ë¬¼ì•½ì„ ë§Œë“¤ì–´ ì ìˆ˜ë¥¼ íšë“í•˜ëŠ” ê²Œìž„ì´ë‹¤.
 			</td>
 		</tr>
 		
@@ -661,17 +661,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~3¸í
+				<img src="./img/user.png" align="middle"> 2~3ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 15~30ºÐ
+				<img src="./img/clock.png" align="middle"> 15~30ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				2~3ÀÎÀÌ ÇÒ ¼ö ÀÖ´Â Ãß»óÀü·« º¸µå°ÔÀÓÀ¸·Î, Áß±¹½Ä Ã¼½º¿Í ºñ½ÁÇÏ´Ù.<br>
+				2~3ì¸ì´ í•  ìˆ˜ ìžˆëŠ” ì¶”ìƒì „ëžµ ë³´ë“œê²Œìž„ìœ¼ë¡œ, ì¤‘êµ­ì‹ ì²´ìŠ¤ì™€ ë¹„ìŠ·í•˜ë‹¤.<br>
 				
 			</td>
 		</tr>
@@ -691,17 +691,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 1¸í
+				<img src="./img/user.png" align="middle"> 1ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> -ºÐ
+				<img src="./img/clock.png" align="middle"> -ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				ÀÚµ¿Â÷·Î °¡µæÂù ÁÖÂ÷Àå¿¡¼­ ÁÖÀÎ°øÀÇ ÀÚµ¿Â÷¸¦ Å»Ãâ½ÃÅ°´Â 1ÀÎ¿ë º¸µå°ÔÀÓÀÌ´Ù.<br>
+				ìžë™ì°¨ë¡œ ê°€ë“ì°¬ ì£¼ì°¨ìž¥ì—ì„œ ì£¼ì¸ê³µì˜ ìžë™ì°¨ë¥¼ íƒˆì¶œì‹œí‚¤ëŠ” 1ì¸ìš© ë³´ë“œê²Œìž„ì´ë‹¤.<br>
 				
 			</td>
 		</tr>
@@ -721,18 +721,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 1¸í
+				<img src="./img/user.png" align="middle"> 1ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> -ºÐ
+				<img src="./img/clock.png" align="middle"> -ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				120¹®Á¦¸¦ ´ãÀº ÆÛÁñ °ÔÀÓÀÌ´Ù.<br>
-				°ÔÀÓÆÇ¿¡ ÁÖ¾îÁø ºí·ÏÀ» ´Ù ³õÀ¸¸é ¼º°ø!
+				120ë¬¸ì œë¥¼ ë‹´ì€ í¼ì¦ ê²Œìž„ì´ë‹¤.<br>
+				ê²Œìž„íŒì— ì£¼ì–´ì§„ ë¸”ë¡ì„ ë‹¤ ë†“ìœ¼ë©´ ì„±ê³µ!
 			</td>
 		</tr>
 		
@@ -751,17 +751,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~8¸í
+				<img src="./img/user.png" align="middle"> 2~8ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 15ºÐ
+				<img src="./img/clock.png" align="middle"> 15ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				´Ù¸¥ »ç¶÷º¸´Ù ¸ÕÀú ³» Ä«µå¿¡ ÀÖ´Â ±×¸²°ú °°Àº ±×¸²À» Ã£¾Æ Ä«µå¸¦ °¡Á®¿À°Å³ª ¹ö¸®´Â °ÔÀÓ.<br>
+				ë‹¤ë¥¸ ì‚¬ëžŒë³´ë‹¤ ë¨¼ì € ë‚´ ì¹´ë“œì— ìžˆëŠ” ê·¸ë¦¼ê³¼ ê°™ì€ ê·¸ë¦¼ì„ ì°¾ì•„ ì¹´ë“œë¥¼ ê°€ì ¸ì˜¤ê±°ë‚˜ ë²„ë¦¬ëŠ” ê²Œìž„.<br>
 				
 			</td>
 		</tr>
@@ -781,17 +781,17 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2¸í
+				<img src="./img/user.png" align="middle"> 2ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 60~120ºÐ
+				<img src="./img/clock.png" align="middle"> 60~120ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				»óÇÏÁ¾È¾À¸·Î °¢ 19ÁÙÀÌ ±×·ÁÁ® ÀÖ´Â ÆòÆòÇÑ ¹ÙµÏÆÇ¿¡ µÎ ¸íÀÇ »ç¶÷ÀÌ ¹ÙµÏµ¹À» ¼±ÀÇ ±³Â÷Á¡¿¡ ±³´ë·Î ¹ø°¥¾Æ µÎ¸ç Áñ±â´Â °ÔÀÓÀÌ´Ù.<br>
+				ìƒí•˜ì¢…íš¡ìœ¼ë¡œ ê° 19ì¤„ì´ ê·¸ë ¤ì ¸ ìžˆëŠ” í‰í‰í•œ ë°”ë‘‘íŒì— ë‘ ëª…ì˜ ì‚¬ëžŒì´ ë°”ë‘‘ëŒì„ ì„ ì˜ êµì°¨ì ì— êµëŒ€ë¡œ ë²ˆê°ˆì•„ ë‘ë©° ì¦ê¸°ëŠ” ê²Œìž„ì´ë‹¤.<br>
 				
 			</td>
 		</tr>
@@ -811,18 +811,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2¸í
+				<img src="./img/user.png" align="middle"> 2ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 60~120ºÐ
+				<img src="./img/clock.png" align="middle"> 60~120ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				2ÀÎ¿ë º¸µå °ÔÀÓ. º¸Åë µÎ »ç¶÷ÀÌ ¸¶ÁÖ ¾É¾Æ Ã¼Å© ¹«´ÌÀÇ ÆÇ°ú Æ¯º°ÇÑ ¸ð¾çÀ¸·Î ¸¸µé¾îÁø ¸»À» »ç¿ë, <br>
-				°¢°¢ÀÇ ¸»À» ±× Á¾·ù¿¡ µû¶ó °¢±â ´Ù¸¥ Çà¸¶¹ý¿¡ ÀÇÇØ ¿òÁ÷¿© »ó´ë¹æÀÇ ÃÖ°í ¸»ÀÎ Å·(king)À» ¿ÈÂ¦´Þ½ÏÇÒ ¼ö ¾øÀÌ ÀâÈú ¼ö¹Û¿¡ ¾ø´Â »óÈ²À¸·Î ¸ô¾Æ³Ö´Â °ÍÀÌ ¸ñÇ¥ÀÌ´Ù. 
+				2ì¸ìš© ë³´ë“œ ê²Œìž„. ë³´í†µ ë‘ ì‚¬ëžŒì´ ë§ˆì£¼ ì•‰ì•„ ì²´í¬ ë¬´ëŠ¬ì˜ íŒê³¼ íŠ¹ë³„í•œ ëª¨ì–‘ìœ¼ë¡œ ë§Œë“¤ì–´ì§„ ë§ì„ ì‚¬ìš©, <br>
+				ê°ê°ì˜ ë§ì„ ê·¸ ì¢…ë¥˜ì— ë”°ë¼ ê°ê¸° ë‹¤ë¥¸ í–‰ë§ˆë²•ì— ì˜í•´ ì›€ì§ì—¬ ìƒëŒ€ë°©ì˜ ìµœê³  ë§ì¸ í‚¹(king)ì„ ì˜´ì§ë‹¬ì‹¹í•  ìˆ˜ ì—†ì´ ìž¡íž ìˆ˜ë°–ì— ì—†ëŠ” ìƒí™©ìœ¼ë¡œ ëª°ì•„ë„£ëŠ” ê²ƒì´ ëª©í‘œì´ë‹¤. 
 			</td>
 		</tr>
 		
@@ -841,18 +841,18 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
-				<img src="./img/user.png" align="middle"> 2~10¸í
+				<img src="./img/user.png" align="middle"> 2~10ëª…
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
-				<img src="./img/clock.png" align="middle"> 10~30ºÐ
+				<img src="./img/clock.png" align="middle"> 10~30ë¶„
 			</td>
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				½ºÆ½À» ¶³¾îÆ®¸®Áö ¾Ê°Å³ª Å¸¿ö¸¦ ¾²·¯Æ®¸®Áö ¾Ê°í ½ºÆ½À» ½×¾Æ¶ó! <br>
-				°ÔÀÓÀÌ ³¡³¯¶§ °¡Àå ³·Àº Á¡¼ö¸¦ °¡ÁøÀÚ°¡ ¿ì½Â!! 
+				ìŠ¤í‹±ì„ ë–¨ì–´íŠ¸ë¦¬ì§€ ì•Šê±°ë‚˜ íƒ€ì›Œë¥¼ ì“°ëŸ¬íŠ¸ë¦¬ì§€ ì•Šê³  ìŠ¤í‹±ì„ ìŒ“ì•„ë¼! <br>
+				ê²Œìž„ì´ ëë‚ ë•Œ ê°€ìž¥ ë‚®ì€ ì ìˆ˜ë¥¼ ê°€ì§„ìžê°€ ìš°ìŠ¹!! 
 			</td>
 		</tr>
 		
