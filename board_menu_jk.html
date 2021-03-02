@@ -95,18 +95,14 @@
 		}
 		
 		document.getElementById("randGame_img").src = "./img/bangle.gif";
-		dispRanGame(result);
-		/*
-		setTimeOut(function(){
-			dispRanGame(result);
-		}, 5000);
-		*/
 		
+		setTimeout(function(idx){
+			document.getElementById("selG").innerHTML = "<br>[랜덤 선택된 게임명: <b><u>" + gameNms[idx] + "</b></u>]";
+			document.getElementById("randGame_img").src = "./img/"+ imgNms[idx];
+			document.getElementById("randGame_img").style.border = "5px solid red";
+			document.getElementById("selG_t").innerHTML = "<br>";
+		}, 5000, result);
 		
-		//document.getElementById("selG").innerHTML = "<br>[랜덤 선택된 게임명: <b><u>" + gameNms[result] + "</b></u>]";
-		//document.getElementById("randGame_img").src = "./img/"+ imgNms[result];
-		//document.getElementById("randGame_img").style.border = "5px solid red";
-		//document.getElementById("selG_t").innerHTML = "<br>";
 	}
 	
 	//랜덤 게임 표시
