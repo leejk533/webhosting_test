@@ -6,27 +6,27 @@
 		        	,2,2,2,2,2
 		        	,2,2,2,2,2
 		        	,2,2,2,2,2
-		        	,2,2];
+		        	,2,2,2];
 	var maxPls = [0
 	        		,4,8,4,5,6
 	        		,5,6,4,6,4
 	        		,8,4,4,4,4
 	        		,2,4,8,2,2
-	        		,10,4];
+	        		,10,4,8];
 	
 	var gameNms = [""
 			        ,"카탄 (Catan)","시타델 (Citadels)","스플렌더 (Splendor)","보난자 (Bohnanza)","러브레터 (Love Letter)"
 			        ,"차오차오 (Ciao Ciao)","클루 (Clue)","다빈치코드","마리오 모노폴리","루미큐브 (RummiKub)"
 			        ,"로보77 (Lobo77)","펭귄얼음깨기","쏘리 (Sorry)","맨해튼","부루마블 (Blue Marble)"
-			        ,"배틀쉽","포션폭발 (Potion Explosion)","도블 (Dobble)","바둑","체스 (Chess)"
-			        ,"스틱스택 (Stick Stack)","아줄 (AZUL)"];
+			        ,"게스 후(Guess who)","포션폭발 (Potion Explosion)","도블 (Dobble)","바둑","체스 (Chess)"
+			        ,"스틱스택 (Stick Stack)","아줄 (AZUL)","요트 다이스"];
 	
 	var imgNms = [""
 			        ,"catan.png","citadels.png","splendor.jpg","bohnan.jpg","loveletter.jpg"
 			        ,"ciao.jpg","clue.jpg","davinci.png","mariomono.png","rummikub.jpg"
 			        ,"lobo77.jpg","penguin.png","sorry.png","manhatan.jpg","bluemarble.jpg"
-			        ,"battleship.png","potion.jpg","dobble.jpg","baduk.jpg","chess.jpg"
-			        ,"stickstack.png","azul.jpg"];
+			        ,"guestwho.png","potion.jpg","dobble.jpg","baduk.jpg","chess.jpg"
+			        ,"stickstack.png","azul.jpg","ydice.png"];
 	
 	/**
 		화면 초기화
@@ -607,7 +607,7 @@
 		</tr>
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
-				상대방의 전함을 공격하고 내 전함을 보호하는 전략 시뮬레이션 게임<br>
+				상대방의 대상을 질문을 통해 맞추는 게임.<br>
 				
 			</td>
 		</tr>
@@ -788,6 +788,35 @@
 		<tr valign="top">
 			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
 				타일로 왕궁 벽면을 꾸며서 포인트를 얻어 승리하는 게임!
+			</td>
+		</tr>
+		
+		<tr valign="top">
+			<td colspan="2" height="10"> </td>
+		</tr>
+	</table>
+	<table id="game23">	
+		<tr valign="top">
+			<td rowspan="4" width="210">
+				<img src="./img/" id="game23_img">
+			</td>
+			<td style="font-size: 18px; font-weight: bold; font-family: dotum;" height="30" id="game23_nm">
+				
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="30">
+				<img src="./img/user.png" align="middle"> 2~8명
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="40">
+				<img src="./img/clock.png" align="middle"> 30~45분
+			</td>
+		</tr>
+		<tr valign="top">
+			<td style="font-size: 12px; font-weight: bold; font-family: dotum;" height="100">
+				주사위를 굴리고 족보를 완성하여 승리하는 게임! 운과 전략이 공존!
 			</td>
 		</tr>
 		
